@@ -142,9 +142,9 @@ class _SignupScreenState extends State<SignupScreen> {
                     icon: const Icon(FontAwesomeIcons.facebook)),
               ],
             ),
-            // const SizedBox(
-            //   height: 50,
-            // ),
+            const SizedBox(
+              height: 50,
+            ),
           ],
         ),
       ),
