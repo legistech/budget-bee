@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1073569578631",
+    "project_id": "budgetbee-8711a",
+    "storage_bucket": "budgetbee-8711a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073569578631:android:ec9f779cc5643c75be8222",
+        "android_client_info": {
+          "package_name": "com.example.budgetbee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1073569578631-e285hqgo674ukrua8ts8hc93k24vvkfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcEBAcLbPK6O_thH6CV4uH6XIIkf61AMc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1073569578631-e285hqgo674ukrua8ts8hc93k24vvkfm.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1073569578631-9v7tn8fkdm35ruf0qhohc65qt4bqbi5i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.budgetbee.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
