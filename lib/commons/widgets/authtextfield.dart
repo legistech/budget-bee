@@ -20,7 +20,7 @@ class AuthTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
+      // height: 80,
       padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
       child: Card(
         elevation: 2,

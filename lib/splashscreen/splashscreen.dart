@@ -1,6 +1,6 @@
 //import 'package:budgetbee/onboarding/onboard.dart';
 import 'package:flutter/material.dart';
-import 'package:budgetbee/splashscreen/Splashtimer.dart';
+import 'package:budgetbee/splashscreen/splashfunc.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -10,12 +10,12 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  SplashServices SplashScreen = SplashServices();
+  SplashServices splashscreen = SplashServices();
 
   @override
   void initState() {
     super.initState();
-    SplashScreen.isLogin(context);
+    splashscreen.isLogin(context);
   }
 
   @override

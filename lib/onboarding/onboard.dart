@@ -1,14 +1,9 @@
-//import 'package:budgetbee/commons/elevatedcustom.dart';
-import 'package:budgetbee/Features/Auth/Login_screen.dart';
-
+import 'package:budgetbee/Features/Auth/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
 import 'views/view1.dart';
 import 'views/view2.dart';
 import 'views/view3.dart';
-
-//import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoard extends StatefulWidget {
   const OnBoard({super.key});

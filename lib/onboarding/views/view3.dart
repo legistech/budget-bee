@@ -1,4 +1,4 @@
-import 'package:budgetbee/Features/Auth/Login_screen.dart';
+import 'package:budgetbee/Features/Auth/login_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../commons/widgets/elevatedcustom.dart';

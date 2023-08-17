@@ -1,15 +1,11 @@
 import 'package:budgetbee/Features/Auth/Signup_screen.dart';
-//import 'package:budgetbee/Features/Home/home_screen.dart';
-
 import 'package:budgetbee/commons/widgets/authtextfield.dart';
 import 'package:budgetbee/commons/widgets/elevatedcustom.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-//import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../commons/errormessage/errormesage.dart';
+import '../Home/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -33,13 +29,18 @@ class _LoginScreenState extends State<LoginScreen> {
     passwordcontroller.dispose();
   }
 
-  void Login() {
+  void login() {
     _auth
         .signInWithEmailAndPassword(
             email: emailcontroller.text.toString(),
             password: passwordcontroller.text.toString())
-        .then((value) {})
-        .onError(
+        .then((value) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (BuildContext context) => const HomeScreen()),
+      );
+    }).onError(
       (error, stackTrace) {
         errormessage().toastMessage(
           error.toString(),
@@ -53,7 +54,6 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          //mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(
               height: 50,
@@ -136,7 +136,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 title: 'SIGN IN',
                 onTap: () {
                   if (_formkey.currentState!.validate()) {
-                    Login();
+                    login();
                   }
                   // Navigator.push(
                   //   context,
