@@ -1,5 +1,3 @@
-//import 'package:budgetbee/Auth/Authscreen.dart';
-import 'package:budgetbee/Features/Auth/Login_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../commons/widgets/elevatedcustom.dart';
@@ -12,9 +10,6 @@ class OnBoard3 extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const SizedBox(
-          height: 45,
-        ),
         Center(
           child: Image.asset(
             'assets/onboard3.png',
@@ -22,7 +17,7 @@ class OnBoard3 extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 55,
+          height: 50,
         ),
         Transform.rotate(
           angle: 3.14,
@@ -36,13 +31,9 @@ class OnBoard3 extends StatelessWidget {
         const SizedBox(
           height: 50,
         ),
-        const Column(
-          children: [
-            Text(
-              'Easy methods of payment',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-          ],
+        const Text(
+          'Shop from multiple Vendors',
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
         // const SizedBox(
         //   height: 40,
@@ -54,13 +45,16 @@ class OnBoard3 extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
+        // const SizedBox(
+        //   height: 40,
+        // ),
         RoundButton(
-            title: 'Get Started',
+            title: 'Next',
             onTap: () {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => const LoginScreen()));
+                      builder: (BuildContext context) => const OnBoard3()));
             })
       ],
     );
