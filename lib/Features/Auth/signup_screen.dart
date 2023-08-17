@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../commons/widgets/authtextfield.dart';
+import '../../commons/widgets/customtextbutton.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -92,16 +93,16 @@ class _SignupScreenState extends State<SignupScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  TextButton(
-                      onPressed: () {
+                  CustomTextButton(
+                      ButtonText: 'Already have an account?',
+                      OnPressed: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  const LoginScreen()),
+                                  const SignupScreen()),
                         );
-                      },
-                      child: const Text('Already have an account?')),
+                      }),
                 ],
               ),
             ),

@@ -1,5 +1,6 @@
 import 'package:budgetbee/Features/Auth/Signup_screen.dart';
 import 'package:budgetbee/commons/widgets/authtextfield.dart';
+import 'package:budgetbee/commons/widgets/customtextbutton.dart';
 import 'package:budgetbee/commons/widgets/elevatedcustom.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -167,16 +168,16 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text("Don't have an account?"),
-                TextButton(
-                    onPressed: () {
+                CustomTextButton(
+                    ButtonText: 'Sign up',
+                    OnPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (BuildContext context) =>
                                 const SignupScreen()),
                       );
-                    },
-                    child: const Text('Sign up')),
+                    }),
               ],
             )
           ],
