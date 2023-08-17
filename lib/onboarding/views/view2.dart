@@ -43,9 +43,9 @@ class OnBoard2 extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-        // const SizedBox(
-        //   height: 40,
-        // ),
+        const SizedBox(
+          height: 49,
+        ),
         // RoundButton(
         //     title: 'Next',
         //     onTap: () {

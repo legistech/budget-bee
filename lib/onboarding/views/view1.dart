@@ -46,6 +46,9 @@ class OnBoard1 extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
+        const SizedBox(
+          height: 48,
+        ),
         // const SizedBox(
         //   height: 40,
         // ),
