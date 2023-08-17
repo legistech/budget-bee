@@ -33,9 +33,6 @@ class OnBoard2 extends StatelessWidget {
           'Shop from multiple Vendors',
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
-        // const SizedBox(
-        //   height: 40,
-        // ),
         Container(
           padding: const EdgeInsets.all(35),
           child: const Text(
@@ -46,14 +43,6 @@ class OnBoard2 extends StatelessWidget {
         const SizedBox(
           height: 49,
         ),
-        // RoundButton(
-        //     title: 'Next',
-        //     onTap: () {
-        //       Navigator.push(
-        //           context,
-        //           MaterialPageRoute(
-        //               builder: (BuildContext context) => const OnBoard3()));
-        //     })
       ],
     );
   }

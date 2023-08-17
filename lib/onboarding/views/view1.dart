@@ -8,9 +8,6 @@ class OnBoard1 extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        // const SizedBox(
-        //   height: 100,
-        // ),
         Center(
           child: Image.asset(
             'assets/onboard1.png',
@@ -49,17 +46,6 @@ class OnBoard1 extends StatelessWidget {
         const SizedBox(
           height: 48,
         ),
-        // const SizedBox(
-        //   height: 40,
-        // ),
-        // RoundButton(
-        //     title: 'Next',
-        //     onTap: () {
-        //       Navigator.push(
-        //           context,
-        //           MaterialPageRoute(
-        //               builder: (BuildContext context) => const OnBoard2()));
-        //     })
       ],
     );
   }

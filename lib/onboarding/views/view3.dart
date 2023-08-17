@@ -1,6 +1,5 @@
 import 'package:budgetbee/Features/Auth/login_screen.dart';
 import 'package:flutter/material.dart';
-
 import '../../commons/widgets/elevatedcustom.dart';
 
 class OnBoard3 extends StatelessWidget {
@@ -36,9 +35,6 @@ class OnBoard3 extends StatelessWidget {
           'Shop from multiple Vendors',
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
-        // const SizedBox(
-        //   height: 40,
-        // ),
         Container(
           padding: const EdgeInsets.all(35),
           child: const Text(
@@ -46,9 +42,6 @@ class OnBoard3 extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-        // const SizedBox(
-        //   height: 40,
-        // ),
         RoundButton(
             title: 'Next',
             onTap: () {

@@ -36,6 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
             email: emailcontroller.text.toString(),
             password: passwordcontroller.text.toString())
         .then((value) {
+      errormessage().toastMessage(value.user!.email.toString());
       Navigator.push(
         context,
         MaterialPageRoute(
