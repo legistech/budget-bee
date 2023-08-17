@@ -1,3 +1,4 @@
+import 'package:budgetbee/Features/Auth/Login_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../commons/widgets/elevatedcustom.dart';
@@ -54,7 +55,7 @@ class OnBoard3 extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => const OnBoard3()));
+                      builder: (BuildContext context) => const LoginScreen()));
             })
       ],
     );
