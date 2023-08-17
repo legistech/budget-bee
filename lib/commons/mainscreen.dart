@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../Features/Profileoptions/logout.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -23,9 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Text(
       'Favourite Products',
     ),
-    Text(
-      'Profile Settings',
-    ),
+    LogoutButton(),
   ];
 
   void _onItemTapped(int index) {
