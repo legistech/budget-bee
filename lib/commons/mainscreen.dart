@@ -16,15 +16,9 @@ class _HomeScreenState extends State<HomeScreen> {
     Text(
       'Home',
     ),
-    Text(
-      'Category',
-    ),
-    Text(
-      'Cart',
-    ),
-    Text(
-      'Favourite Products',
-    ),
+    LogoutButton(),
+    LogoutButton(),
+    LogoutButton(),
     LogoutButton(),
   ];
 
