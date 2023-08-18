@@ -1,12 +1,13 @@
 import 'package:budgetbee/Features/Auth/Signup_screen.dart';
+import 'package:budgetbee/commons/errormessage/errormesage.dart';
 import 'package:budgetbee/commons/widgets/authtextfield.dart';
 import 'package:budgetbee/commons/widgets/customtextbutton.dart';
 import 'package:budgetbee/commons/widgets/elevatedcustom.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../../commons/errormessage/errormesage.dart';
-import '../../commons/mainscreen.dart';
+
+import '../../../commons/mainscreen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -140,11 +141,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   if (_formkey.currentState!.validate()) {
                     login();
                   }
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //       builder: (BuildContext context) => const HomeScreen()),
-                  // );
                 }),
             const SizedBox(
               height: 50,

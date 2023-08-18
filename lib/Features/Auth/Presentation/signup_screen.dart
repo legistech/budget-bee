@@ -3,8 +3,9 @@ import 'package:budgetbee/commons/widgets/elevatedcustom.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../../commons/widgets/authtextfield.dart';
-import '../../commons/widgets/customtextbutton.dart';
+import '../../../commons/widgets/authtextfield.dart';
+import '../../../commons/widgets/customtextbutton.dart';
+import 'login_screen.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -96,7 +97,7 @@ class _SignupScreenState extends State<SignupScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  const SignupScreen()),
+                                  const LoginScreen()),
                         );
                       }),
                 ],
