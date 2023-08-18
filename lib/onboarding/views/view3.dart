@@ -43,7 +43,7 @@ class OnBoard3 extends StatelessWidget {
           ),
         ),
         RoundButton(
-            title: 'Next',
+            title: 'Get Started',
             onTap: () {
               Navigator.push(
                   context,
