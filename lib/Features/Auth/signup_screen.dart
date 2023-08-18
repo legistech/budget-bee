@@ -117,7 +117,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         .then((value) {})
                         .onError(
                       (error, stackTrace) {
-                        errormessage().toastMessage(
+                        ErrorMessage().toastMessage(
                           error.toString(),
                         );
                       },

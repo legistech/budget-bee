@@ -27,7 +27,7 @@ class _LogoutButtonState extends State<LogoutButton> {
                   MaterialPageRoute(
                       builder: (BuildContext context) => const LoginScreen()),
                 ).onError((error, stackTrace) {
-                  errormessage().toastMessage(error.toString());
+                  ErrorMessage().toastMessage(error.toString());
                 });
               });
             }),

@@ -52,7 +52,7 @@ class _OnBoardState extends State<OnBoard> {
               controller: _controller,
               count: _pages.length,
               effect: const WormEffect(
-                activeDotColor: Color(0xFF185951),
+                activeDotColor: Color(0xFF6A50A7),
               ),
             ),
             const SizedBox(

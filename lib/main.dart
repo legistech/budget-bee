@@ -20,18 +20,20 @@ class ColorTheme extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: const Color(0xFF185951),
-        primarySwatch: const MaterialColor(0xFF185951, {
-          50: Color(0xFFE0F4F3),
-          100: Color(0xFFB3DDD9),
-          200: Color(0xFF80C7C0),
-          300: Color(0xFF4DA0A8),
-          400: Color(0xFF268C90),
-          500: Color(0xFF007877),
-          600: Color(0xFF006C6D),
-          700: Color(0xFF006065),
-          800: Color(0xFF00545C),
-          900: Color(0xFF003F4D),
+        useMaterial3: true,
+        appBarTheme: AppBarTheme(color: Colors.white),
+        primaryColor: const Color(0xFF6A50A7),
+        primarySwatch: const MaterialColor(0xFF6A50A7, {
+          50: Color(0xFFEAE3F2),
+          100: Color(0xFFCAB1E0),
+          200: Color(0xFFAA7ECE),
+          300: Color(0xFF8A4CBB),
+          400: Color(0xFF7638AC),
+          500: Color(0xFF6A50A7),
+          600: Color(0xFF5E489A),
+          700: Color(0xFF53408D),
+          800: Color(0xFF48387F),
+          900: Color(0xFF352A68),
         }),
         textTheme: GoogleFonts.rubikTextTheme(),
       ),

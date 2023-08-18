@@ -37,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
             email: emailcontroller.text.toString(),
             password: passwordcontroller.text.toString())
         .then((value) {
-      errormessage().toastMessage(value.user!.email.toString());
+      ErrorMessage().toastMessage(value.user!.email.toString());
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -45,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
       );
     }).onError(
       (error, stackTrace) {
-        errormessage().toastMessage(
+        ErrorMessage().toastMessage(
           error.toString(),
         );
       },

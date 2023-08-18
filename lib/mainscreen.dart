@@ -1,3 +1,4 @@
+import 'package:budgetbee/Features/Homescreen/homescreen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -13,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
-    LogoutButton(),
+    HomeApp(),
     LogoutButton(),
     LogoutButton(),
     LogoutButton(),
