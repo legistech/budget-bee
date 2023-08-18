@@ -16,7 +16,7 @@ class _HomeAppState extends State<HomeApp> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title: Container(
-            padding: EdgeInsets.fromLTRB(10, 0, 15, 0),
+            padding: const EdgeInsets.fromLTRB(10, 0, 15, 0),
             child: Row(
               children: [
                 // const SizedBox(
