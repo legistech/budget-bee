@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class TrendingCard extends StatelessWidget {
+class Catagorycard extends StatelessWidget {
   final String givetext;
   final String imageurl;
-  const TrendingCard({
+  const Catagorycard({
     super.key,
     required this.givetext,
     required this.imageurl,

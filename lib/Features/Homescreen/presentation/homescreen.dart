@@ -1,7 +1,7 @@
-import 'package:budgetbee/commons/widgets/cardfortrending.dart';
+import 'package:budgetbee/commons/widgets/catagoriescard.dart';
 import 'package:budgetbee/commons/widgets/customtextbutton.dart';
+import 'package:budgetbee/commons/widgets/productcard.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeApp extends StatefulWidget {
@@ -111,22 +111,22 @@ class _HomeAppState extends State<HomeApp> {
                   },
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
-                    child: Text(
+                    padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                    child: const Text(
                       'Categories',
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ),
                   Container(
-                      padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                      padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                       child: CustomTextButton(
                           ButtonText: 'see all', OnPressed: () {}))
                 ],
@@ -138,23 +138,23 @@ class _HomeAppState extends State<HomeApp> {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: const [
-                        TrendingCard(
+                        Catagorycard(
                           givetext: 'Fashion',
                           imageurl: 'assets/clothing.jpeg',
                         ),
-                        TrendingCard(
+                        Catagorycard(
                           givetext: 'Technology',
                           imageurl: 'assets/techcategory.jpg',
                         ),
-                        TrendingCard(
+                        Catagorycard(
                           givetext: 'Gaming',
                           imageurl: 'assets/gaming.jpeg',
                         ),
-                        TrendingCard(
+                        Catagorycard(
                           givetext: 'Sports',
                           imageurl: 'assets/sports.jpg',
                         ),
-                        TrendingCard(
+                        Catagorycard(
                           givetext: "Men's wear",
                           imageurl: 'assets/mens.jpeg',
                         ),
@@ -167,101 +167,65 @@ class _HomeAppState extends State<HomeApp> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
-                    child: Text(
-                      'Trending   ',
+                    padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                    child: const Text(
+                      'Trending',
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ),
                   Container(
-                      padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                      padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                       child: CustomTextButton(
                           ButtonText: 'see all', OnPressed: () {}))
                 ],
               ),
-              Container(
-                padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Card(
-                      child: Column(
-                        children: [
-                          SizedBox(
-                              height: 160,
-                              width: 180,
-                              child: Image.asset(
-                                'assets/clothing.jpeg',
-                                fit: BoxFit.cover,
-                              )),
-                          Text('Product name'),
-                          Text('Price'),
-                        ],
-                      ),
-                    ),
-                    Card(
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: 100,
-                            width: 170,
-                            child: ClipRRect(
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(35)),
-                              child: Image.asset(
-                                'assets/clothing.jpeg', // Replace with the URL of your image
-                                fit: BoxFit.cover,
-                                colorBlendMode: BlendMode.darken,
-                              ),
-                            ),
-                          ),
-                          Text('price')
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ProductCard(
+                      imagepath: 'assets/sports.jpg',
+                      productname: 'productname',
+                      priceofproduct: '123'),
+                  ProductCard(
+                      imagepath: 'assets/sports.jpg',
+                      productname: 'productname',
+                      priceofproduct: '123'),
+                ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
-                    child: Text(
+                    padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                    child: const Text(
                       'On Sale      ',
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ),
                   Container(
-                      padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                      padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                       child: CustomTextButton(
                           ButtonText: 'see all', OnPressed: () {}))
                 ],
               ),
               Expanded(
                 child: GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2, // Number of cards in each row
-                    mainAxisSpacing: 8.0,
-                    crossAxisSpacing: 8.0,
-                    childAspectRatio: 0.9, // Adjust the aspect ratio as needed
+                    mainAxisSpacing: 10.0,
+                    crossAxisSpacing: 16.0,
+                    childAspectRatio: 0.72,
+                    // Adjust the aspect ratio as needed
                   ),
                   itemCount: items.length,
                   itemBuilder: (BuildContext context, int indexof) {
-                    return Card(
-                      child: Column(
-                        children: [
-                          SizedBox(
-                              height: 160,
-                              width: 180,
-                              child: Image.asset('assets/mens.jpeg')),
-                          Text('Product name'),
-                          Text('Price'),
-                        ],
-                      ),
-                    );
+                    return const ProductCard(
+                        imagepath: 'assets/mens.jpeg',
+                        productname: 'Mens wear',
+                        priceofproduct: '1099');
                   },
                 ),
               ),

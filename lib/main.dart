@@ -20,7 +20,7 @@ class ColorTheme extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        useMaterial3: true,
+        //useMaterial3: true,
         appBarTheme:
             const AppBarTheme(color: Color.fromARGB(98, 254, 251, 251)),
         primaryColor: const Color(0xFF6A50A7),
