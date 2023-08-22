@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:intl/intl.dart';
 
 class ProductCard extends StatelessWidget {
   final String priceofproduct;
@@ -15,8 +16,8 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 250,
-      width: 180,
+      height: 280,
+      width: 185,
       child: Card(
         child: Container(
           padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
@@ -25,9 +26,9 @@ class ProductCard extends StatelessWidget {
             children: [
               SizedBox(
                 height: 100,
-                width: 170,
+                width: 190,
                 child: ClipRRect(
-                  borderRadius: const BorderRadius.all(Radius.circular(10)),
+                  borderRadius: const BorderRadius.all(Radius.circular(8)),
                   child: Image.asset(
                     imagepath, // Replace with the URL of your image
                     fit: BoxFit.cover,
@@ -45,9 +46,8 @@ class ProductCard extends StatelessWidget {
               Text(
                 productname,
                 maxLines: 2,
-                style: const TextStyle(
-                  fontSize: 14,
-                ),
+                style:
+                    const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
               ),
               const SizedBox(
                 height: 10,
@@ -59,17 +59,30 @@ class ProductCard extends StatelessWidget {
                     style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    priceofproduct,
+                    NumberFormat.currency(
+                      symbol:
+                          '', // You can customize the currency symbol if needed
+                      decimalDigits:
+                          0, // You can adjust the number of decimal digits
+                    ).format(int.parse(
+                        priceofproduct)), // Assuming priceofproduct is a String
                     style: const TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.bold),
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
               Row(
                 children: [
-                  ElevatedButton(onPressed: () {}, child: Text('Add to card')),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Add to cart'),
+                  ),
                   IconButton(
-                      onPressed: () {}, icon: Icon(FontAwesomeIcons.heart))
+                    onPressed: () {},
+                    icon: const Icon(FontAwesomeIcons.heart),
+                  )
                 ],
               ),
             ],

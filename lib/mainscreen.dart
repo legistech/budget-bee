@@ -1,4 +1,5 @@
 import 'package:budgetbee/Features/Homescreen/presentation/homescreen.dart';
+import 'package:budgetbee/Features/Profileoptions/profileoptions.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -18,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
     LogoutButton(),
     LogoutButton(),
     LogoutButton(),
-    LogoutButton()
+    ProfileOptions(),
   ];
 
   void _onItemTapped(int index) {
