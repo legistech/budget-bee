@@ -1,6 +1,6 @@
 //import 'package:budgetbee/onboarding/onboard.dart';
 import 'package:flutter/material.dart';
-import 'package:budgetbee/splashscreen/splashfunc.dart';
+import 'package:budgetbee/commons/firebaseservices/splashfunc.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

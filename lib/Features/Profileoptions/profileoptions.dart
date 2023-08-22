@@ -1,5 +1,12 @@
+import 'package:budgetbee/Features/Profileoptions/subfeatures/myorders.dart';
+import 'package:budgetbee/Features/Profileoptions/subfeatures/showaddress.dart';
+import 'package:budgetbee/commons/widgets/elevatedcustom.dart';
 import 'package:budgetbee/commons/widgets/profiletile.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
+import '../../commons/errormessage/errormesage.dart';
+import '../Auth/login_screen.dart';
 
 class ProfileOptions extends StatefulWidget {
   const ProfileOptions({super.key});
@@ -9,6 +16,7 @@ class ProfileOptions extends StatefulWidget {
 }
 
 class _ProfileOptionsState extends State<ProfileOptions> {
+  final auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,12 +68,22 @@ class _ProfileOptionsState extends State<ProfileOptions> {
                 ProfileTile(
                   title: 'My orders',
                   subtitle: 'no orders yet',
-                  ontap: () {},
+                  ontap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return MyOrders();
+                    }));
+                  },
                 ),
                 ProfileTile(
                   title: 'Shipping addresses',
                   subtitle: '0 adresses',
-                  ontap: () {},
+                  ontap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return AddressScreen();
+                    }));
+                  },
                 ),
                 ProfileTile(
                   title: 'Payment methods',
@@ -82,9 +100,26 @@ class _ProfileOptionsState extends State<ProfileOptions> {
                   subtitle: 'Notifications, password',
                   ontap: () {},
                 ),
+                SizedBox(
+                  height: 50,
+                ),
+                RoundButton(
+                    title: 'Log out',
+                    onTap: () {
+                      auth.signOut().then((value) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const LoginScreen()),
+                        ).onError((error, stackTrace) {
+                          ErrorMessage().toastMessage(error.toString());
+                        });
+                      });
+                    })
               ],
             ),
-          )
+          ),
         ],
       ),
     );
