@@ -1,9 +1,8 @@
 import 'package:budgetbee/Features/Homescreen/presentation/homescreen.dart';
 import 'package:budgetbee/Features/Profileoptions/profileoptions.dart';
+import 'package:budgetbee/Features/categoryscreen/categoryscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
-import 'Features/Profileoptions/logout.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,9 +15,9 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     HomeApp(),
-    LogoutButton(),
-    LogoutButton(),
-    LogoutButton(),
+    CategoryScreen(),
+    ProfileOptions(),
+    ProfileOptions(),
     ProfileOptions(),
   ];
 
@@ -31,6 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       // appBar: AppBar(),
       body: _widgetOptions.elementAt(_selectedIndex),
 

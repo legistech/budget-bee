@@ -1,6 +1,7 @@
 import 'package:budgetbee/Features/Profileoptions/subfeatures/myorders.dart';
 import 'package:budgetbee/Features/Profileoptions/subfeatures/showaddress.dart';
 import 'package:budgetbee/commons/widgets/elevatedcustom.dart';
+import 'package:budgetbee/commons/widgets/homeappbar.dart';
 import 'package:budgetbee/commons/widgets/profiletile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -20,10 +21,15 @@ class _ProfileOptionsState extends State<ProfileOptions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: const HomeAppBar(
+        title: 'My Profile',
+        implyleading: false,
+      ),
       body: Column(
         children: [
           const SizedBox(
-            height: 130,
+            height: 30,
           ),
           Container(
             padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
@@ -45,7 +51,7 @@ class _ProfileOptionsState extends State<ProfileOptions> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'FALAN Shaks',
+                      'Falan Shaks',
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
@@ -59,7 +65,7 @@ class _ProfileOptionsState extends State<ProfileOptions> {
             ),
           ),
           const SizedBox(
-            height: 60,
+            height: 30,
           ),
           Expanded(
             child: ListView(
@@ -71,19 +77,25 @@ class _ProfileOptionsState extends State<ProfileOptions> {
                   ontap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (BuildContext context) {
-                      return MyOrders();
+                      return const MyOrders();
                     }));
                   },
                 ),
-                ProfileTile(
-                  title: 'Shipping addresses',
-                  subtitle: '0 adresses',
-                  ontap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return AddressScreen();
-                    }));
+                WillPopScope(
+                  onWillPop: () async {
+                    // your code here
+                    return false;
                   },
+                  child: ProfileTile(
+                    title: 'Shipping addresses',
+                    subtitle: '0 adresses',
+                    ontap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (BuildContext context) {
+                        return const AddressScreen();
+                      }));
+                    },
+                  ),
                 ),
                 ProfileTile(
                   title: 'Payment methods',
@@ -100,7 +112,7 @@ class _ProfileOptionsState extends State<ProfileOptions> {
                   subtitle: 'Notifications, password',
                   ontap: () {},
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 ),
                 RoundButton(

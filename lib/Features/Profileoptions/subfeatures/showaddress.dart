@@ -60,7 +60,9 @@ class _PostScreenState extends State<AddressScreen> {
             Expanded(
               child: FirebaseAnimatedList(
                   query: ref,
-                  defaultChild: const Text('loading'),
+                  defaultChild: const Center(
+                    child: CircularProgressIndicator(),
+                  ),
                   itemBuilder: (context, snapshot, animation, index) {
                     //final title = snapshot.child('title').value.toString();
                     //final subtitle = snapshot.child('subtitle').value.toString;
@@ -69,8 +71,8 @@ class _PostScreenState extends State<AddressScreen> {
                       children: [
                         Card(
                           elevation: 4,
-                          surfaceTintColor: Color(0xFF6A50A7),
-                          shadowColor: Color(0xFF6A50A7),
+                          surfaceTintColor: const Color(0xFF6A50A7),
+                          shadowColor: const Color(0xFF6A50A7),
                           child: Column(
                             children: [
                               ListTile(

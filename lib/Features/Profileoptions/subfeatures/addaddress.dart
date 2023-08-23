@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../commons/firebaseservices/firebaseprovider.dart';
+import '../../../commons/firebaseservices/addressprovider.dart';
 import '../../../commons/widgets/elevatedcustom.dart';
 
 class ShippingAddress extends StatefulWidget {
