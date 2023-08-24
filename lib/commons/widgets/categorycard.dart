@@ -14,7 +14,7 @@ class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
       child: GestureDetector(
         onTap: ontap,
         child: Card(
@@ -27,7 +27,7 @@ class CategoryCard extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: SizedBox(
-                      width: 150,
+                      width: 110,
                       child: Text(
                         categorytext,
                         maxLines: 2,
@@ -37,8 +37,8 @@ class CategoryCard extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 190,
-                    height: 120,
+                    width: 170,
+                    height: 100,
                     child: ClipRRect(
                       borderRadius: const BorderRadius.all(Radius.circular(9)),
                       child: Image.asset(

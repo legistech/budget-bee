@@ -1,3 +1,4 @@
+import 'package:budgetbee/Features/categoryscreen/categoryscreen.dart';
 import 'package:budgetbee/commons/widgets/catagoriescard.dart';
 import 'package:budgetbee/commons/widgets/customtextbutton.dart';
 import 'package:budgetbee/commons/widgets/productcard.dart';
@@ -131,7 +132,13 @@ class _HomeAppState extends State<HomeApp> {
                     Container(
                         padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
                         child: CustomTextButton(
-                            ButtonText: 'see all', OnPressed: () {}))
+                            ButtonText: 'see all',
+                            OnPressed: () {
+                              Navigator.push(context, MaterialPageRoute(
+                                  builder: (BuildContext context) {
+                                return const CategoryScreen();
+                              }));
+                            }))
                   ],
                 ),
                 SizedBox(
