@@ -1,5 +1,6 @@
 import 'package:budgetbee/Features/Profileoptions/subfeatures/myorders.dart';
 import 'package:budgetbee/Features/Profileoptions/subfeatures/showaddress.dart';
+import 'package:budgetbee/Features/Profileoptions/subfeatures/uploadscreen.dart';
 import 'package:budgetbee/commons/widgets/elevatedcustom.dart';
 import 'package:budgetbee/commons/widgets/homeappbar.dart';
 import 'package:budgetbee/commons/widgets/profiletile.dart';
@@ -103,13 +104,18 @@ class _ProfileOptionsState extends State<ProfileOptions> {
                   ontap: () {},
                 ),
                 ProfileTile(
-                  title: 'My reviews',
-                  subtitle: 'no reviews yet',
-                  ontap: () {},
+                  title: 'Upload products',
+                  subtitle: 'open your own store and start selling',
+                  ontap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return const UploadScreen();
+                    }));
+                  },
                 ),
                 ProfileTile(
-                  title: 'Settings',
-                  subtitle: 'Notifications, password',
+                  title: 'Password',
+                  subtitle: 'Change/reset  password',
                   ontap: () {},
                 ),
                 const SizedBox(
