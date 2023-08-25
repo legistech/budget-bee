@@ -1,3 +1,4 @@
+import 'package:budgetbee/Features/Favouritescreen/favouritescreen.dart';
 import 'package:budgetbee/Features/Homescreen/presentation/homescreen.dart';
 import 'package:budgetbee/Features/Profileoptions/profileoptions.dart';
 import 'package:budgetbee/Features/categoryscreen/categoryscreen.dart';
@@ -17,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     HomeApp(),
     CategoryScreen(),
     ProfileOptions(),
-    ProfileOptions(),
+    FavouriteScreen(),
     ProfileOptions(),
   ];
 
@@ -33,7 +34,6 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.white,
       // appBar: AppBar(),
       body: _widgetOptions.elementAt(_selectedIndex),
-
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         iconSize: 24,
