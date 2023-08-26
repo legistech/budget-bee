@@ -1,23 +1,22 @@
 import 'package:budgetbee/commons/widgets/productcard.dart';
 import 'package:flutter/material.dart';
 
-class FavouriteScreen extends StatefulWidget {
-  const FavouriteScreen({super.key});
+class SingleCategory extends StatefulWidget {
+  const SingleCategory({super.key});
 
   @override
-  State<FavouriteScreen> createState() => _FavouriteScreenState();
+  State<SingleCategory> createState() => _SingleCategoryState();
 }
 
-class _FavouriteScreenState extends State<FavouriteScreen> {
+class _SingleCategoryState extends State<SingleCategory> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         foregroundColor: Colors.black,
         backgroundColor: Colors.white,
         title: const Text(
-          'Favourites',
+          'Category',
           style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,

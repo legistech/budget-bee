@@ -70,15 +70,60 @@ class _HomeAppState extends State<HomeApp> {
                     // Define different actions for each index
                     if (index == 0) {
                       // Action for the first card
-                      print('Tapped on the first card');
+                      showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text('Contact us to display your ad here'),
+                              content: Text('BudgetBee@gmail.com'),
+                              actions: <Widget>[
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.pop(context); // Close the dialog
+                                  },
+                                  child: Text('Close'),
+                                ),
+                              ],
+                            );
+                          });
                       // Add your desired action here
                     } else if (index == 1) {
                       // Action for the second card
-                      print('Tapped on the second card');
+                      showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text('Contact us to display your ad here'),
+                              content: Text('BudgetBee@gmail.com'),
+                              actions: <Widget>[
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.pop(context); // Close the dialog
+                                  },
+                                  child: Text('Close'),
+                                ),
+                              ],
+                            );
+                          });
                       // Add your desired action here
                     } else if (index == 2) {
                       // Action for the third card
-                      print('Tapped on the third card');
+                      showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return AlertDialog(
+                              title: Text('Contact us to display your ad here'),
+                              content: Text('BudgetBee@gmail.com'),
+                              actions: <Widget>[
+                                TextButton(
+                                  onPressed: () {
+                                    Navigator.pop(context); // Close the dialog
+                                  },
+                                  child: Text('Close'),
+                                ),
+                              ],
+                            );
+                          });
                       // Add your desired action here
                     }
                   }
