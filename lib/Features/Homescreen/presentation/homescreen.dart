@@ -5,6 +5,8 @@ import 'package:budgetbee/commons/widgets/productcard.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../../commons/firebaseservices/productprovider.dart';
+
 class HomeApp extends StatefulWidget {
   const HomeApp({super.key});
 
@@ -15,6 +17,8 @@ class HomeApp extends StatefulWidget {
 class _HomeAppState extends State<HomeApp> {
   final List<String> items =
       List.generate(20, (indexof) => 'Item ${indexof + 1}');
+  final FirebaseProvider _firebaseProvider = FirebaseProvider();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -281,24 +285,25 @@ class _HomeAppState extends State<HomeApp> {
               ],
             ),
           ])),
-          SliverGrid(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 1.0,
-              //crossAxisSpacing: 5.0,
-              childAspectRatio: 0.72,
-            ),
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                return const ProductCard(
-                  imagepath: 'assets/mens.jpeg',
-                  productname: 'Mens wear',
-                  priceofproduct: '1099',
-                );
-              },
-              childCount: items.length,
-            ),
-          )
+
+          // SliverGrid(
+          //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          //     crossAxisCount: 2,
+          //     mainAxisSpacing: 1.0,
+          //     //crossAxisSpacing: 5.0,
+          //     childAspectRatio: 0.72,
+          //   ),
+          //   delegate: SliverChildBuilderDelegate(
+          //     (BuildContext context, int index) {
+          //       return const ProductCard(
+          //         imagepath: 'assets/mens.jpeg',
+          //         productname: 'Mens wear',
+          //         priceofproduct: '1099',
+          //       );
+          //     },
+          //     childCount: items.length,
+          //   ),
+          // )
         ],
       ),
     );

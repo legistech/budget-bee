@@ -15,7 +15,6 @@ class AddressScreen extends StatefulWidget {
 class _PostScreenState extends State<AddressScreen> {
   final auth = FirebaseAuth.instance;
   final user = FirebaseAuth.instance.currentUser;
-  final searchfilter = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
