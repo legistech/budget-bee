@@ -2,6 +2,8 @@
 
 An ecommerce Application for shopping products of households and technology.
 
+![logo](https://github.com/Haxeeb71/BudgetBee/assets/135656763/c7bbf33d-c583-4172-a447-3ea56bc92999)
+
 ## Setup
 
 Run the following commands from your terminal:
