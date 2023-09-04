@@ -1,10 +1,13 @@
 # budgetbee
 
-A new Flutter project.
+An ecommerce Application for shopping products of households and technology.
 
-## Getting Started
+## Setup
 
-This project is a starting point for a Flutter application.
+Run the following commands from your terminal:
+1. git clone https://github.com/Haxeeb71/BudgetBee---ecommerce-application.git to clone this repository
+2. flutter pub get in the project root directory to install all the required dependencies.
+
 
 A few resources to get you started if this is your first Flutter project:
 
