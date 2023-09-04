@@ -8,7 +8,7 @@ Run the following commands from your terminal:
 1. git clone https://github.com/Haxeeb71/BudgetBee---ecommerce-application.git to clone this repository
 2. flutter pub get in the project root directory to install all the required dependencies.
 
-##Scrennshots
+## Screenshots
 
 <div>
     <img src="https://github.com/Haxeeb71/BudgetBee---ecommerce-application/assets/135656763/8e876c29-6ec5-4a05-9a07-ba429b3de102" alt="Screenshot_1" width="300" height="630">
