@@ -20,4 +20,5 @@ Run the following commands from your terminal:
     <img src="https://github.com/Haxeeb71/BudgetBee---ecommerce-application/assets/135656763/427083c8-1e99-42eb-a339-ee46f1621231" alt="Screenshot_5" width="300" height="630">
 </div>
 
-
+##License
+Budgetbee is MIT-licensed.
