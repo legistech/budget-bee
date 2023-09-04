@@ -1,6 +1,7 @@
 import 'package:budgetbee/Features/Favouritescreen/favouritescreen.dart';
 import 'package:budgetbee/Features/Homescreen/presentation/homescreen.dart';
 import 'package:budgetbee/Features/Profileoptions/profileoptions.dart';
+import 'package:budgetbee/Features/cartscreen/cartscreen.dart';
 import 'package:budgetbee/Features/categoryscreen/categoryscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -17,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   static const List<Widget> _widgetOptions = <Widget>[
     HomeApp(),
     CategoryScreen(),
-    ProfileOptions(),
+    CartScreen(),
     FavouriteScreen(),
     ProfileOptions(),
   ];

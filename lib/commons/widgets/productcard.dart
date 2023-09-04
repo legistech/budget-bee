@@ -44,13 +44,13 @@ class ProductCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Text('⭐4.5'),
-                const SizedBox(
-                  height: 10,
-                ),
+                // const SizedBox(
+                //   height: 10,
+                // ),
+                // const Text('⭐4.5'),
+                // const SizedBox(
+                //   height: 10,
+                // ),
                 Text(
                   productname,
                   maxLines: 2,

@@ -47,6 +47,8 @@ dependencies:
   provider: ^6.0.5
   firebase_database: ^10.2.5
   image_picker: ^1.0.2
+  flutter_credit_card: ^3.0.7
+  firebase_storage: ^11.2.6
   
 
 dev_dependencies:
@@ -84,6 +86,7 @@ flutter:
      - assets/fashion.jpeg
      - assets/gaming.jpeg
      - assets/mens.jpeg
+     - assets/jacket.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,7 +1,7 @@
-import 'package:budgetbee/commons/widgets/homeappbar.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-import 'dart:io';
+import 'package:provider/provider.dart';
+import 'package:budgetbee/commons/firebaseservices/productprovider.dart';
+import '../../../commons/widgets/elevatedcustom.dart';
 
 class UploadScreen extends StatefulWidget {
   const UploadScreen({super.key});
@@ -11,45 +11,79 @@ class UploadScreen extends StatefulWidget {
 }
 
 class _UploadScreenState extends State<UploadScreen> {
-  File? _imageFile;
-
-  Future<void> _pickImage() async {
-    final pickedFile =
-        await ImagePicker().pickImage(source: ImageSource.gallery);
-    if (pickedFile != null) {
-      setState(() {
-        _imageFile = File(pickedFile.path);
-      });
-    }
-  }
-
+  final productController = TextEditingController();
+  final descriptionController = TextEditingController();
+  final priceController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const HomeAppBar(
-        title: 'Upload Product',
-        implyleading: true,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        title: const Text(
+          'Upload product',
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
       ),
       body: Column(
         children: [
-          Text('select an image to upload'),
-          Text(
-            'product name',
+          const SizedBox(
+            height: 40,
           ),
-          Text(
-            'product price',
+          ChangeNotifierProvider(
+            create: (_) => FirebaseProvider(),
+            child: Consumer<FirebaseProvider>(
+              builder: (context, firebaseProvider, _) {
+                return Container(
+                  padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        controller: productController,
+                        maxLines: 2,
+                        decoration: const InputDecoration(
+                            hintText: "product name",
+                            border: OutlineInputBorder()),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TextFormField(
+                        controller: priceController,
+                        maxLines: 1,
+                        decoration: const InputDecoration(
+                            hintText: "product price",
+                            border: OutlineInputBorder()),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      TextFormField(
+                        controller: descriptionController,
+                        maxLines: 5,
+                        decoration: const InputDecoration(
+                            hintText: "product description",
+                            border: OutlineInputBorder()),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      RoundButton(
+                          title: 'upload pictures to Add product',
+                          onTap: () {
+                            firebaseProvider.addProductWithImage(
+                              productController.text.toString(),
+                              descriptionController.text.toString(),
+                              priceController.text.toString(),
+                            );
+                          })
+                    ],
+                  ),
+                );
+              },
+            ),
           ),
-          Text(
-            'product description',
-          ),
-          Builder(builder: (context) {
-            return IconButton(
-                onPressed: () {
-                  _pickImage();
-                },
-                icon: Icon(Icons.abc));
-          }),
-          if (_imageFile != null) Expanded(child: Image.file(_imageFile!)),
         ],
       ),
     );

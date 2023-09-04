@@ -67,7 +67,7 @@ class _ProductScreenState extends State<ProductScreen> {
                                   const BorderRadius.all(Radius.circular(5)),
                               child: Image.asset(
                                 index == 0
-                                    ? 'assets/gaming.jpeg'
+                                    ? 'assets/jacket.jpg'
                                     : index == 1
                                         ? 'assets/techcategory.jpg'
                                         : 'assets/gaming.jpeg',
@@ -169,7 +169,7 @@ class _ProductScreenState extends State<ProductScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
-                      'Gaming PC',
+                      "90's Style Leather Jacket",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -189,7 +189,7 @@ class _ProductScreenState extends State<ProductScreen> {
                             decimalDigits:
                                 0, // You can adjust the number of decimal digits
                           ).format(int.parse(
-                              '170000')), // Assuming priceofproduct is a String
+                              '4000')), // Assuming priceofproduct is a String
                           style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -200,18 +200,18 @@ class _ProductScreenState extends State<ProductScreen> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: const Row(
-                  children: [
-                    Icon(
-                      Icons.star,
-                      color: Colors.yellow,
-                    ),
-                    Text('(4.5)'),
-                  ],
-                ),
-              ),
+              // Padding(
+              //   padding: const EdgeInsets.all(15.0),
+              //   child: const Row(
+              //     children: [
+              //       Icon(
+              //         Icons.star,
+              //         color: Colors.yellow,
+              //       ),
+              //       Text('(4.5)'),
+              //     ],
+              //   ),
+              // ),
 
               Padding(
                 padding: const EdgeInsets.all(15.0),

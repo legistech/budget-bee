@@ -89,7 +89,7 @@ class CategoryScreen extends StatelessWidget {
               ),
               CategoryCard(
                 yourimage: 'assets/fashion.jpeg',
-                categorytext: 'Fahion Items',
+                categorytext: "Women's Fashion",
                 ontap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (BuildContext context) {
@@ -98,8 +98,8 @@ class CategoryScreen extends StatelessWidget {
                 },
               ),
               CategoryCard(
-                yourimage: 'assets/fashion.jpeg',
-                categorytext: 'Fahion Items',
+                yourimage: 'assets/mens.jpeg',
+                categorytext: "Men's Fashion",
                 ontap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (BuildContext context) {
