@@ -148,10 +148,10 @@ class _HomeAppState extends State<HomeApp> {
                                 const BorderRadius.all(Radius.circular(35)),
                             child: Image.network(
                               index == 0
-                                  ? 'https://i0.wp.com/kidskapray.com/wp-content/uploads/2022/09/Maria-B-Winter-Sale-2022-Flat-50-Off.jpg?resize=728%2C342&ssl=1'
+                                  ? 'https://cdn.klfoodie.com/2023/05/Untitled-design-2-6-780x470-1-780x470.png'
                                   : index == 1
-                                      ? 'https://dressesglobe.com/wp-content/uploads/2021/12/Al-Akram-Winter-ready-to-wear-collection-1024x413.png'
-                                      : 'https://glamrux.com/blog/wp-content/uploads/2023/03/Summer-Lawn-Sale-2023.jpg.webp',
+                                      ? 'https://cdn.klfoodie.com/2023/05/Untitled-design-2-6-780x470-1-780x470.png'
+                                      : 'https://cdn.klfoodie.com/2023/05/Untitled-design-2-6-780x470-1-780x470.png',
                               fit: BoxFit.cover,
                             ),
                           ),
