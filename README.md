@@ -1,3 +1,5 @@
+![budget-bee](https://socialify.git.ci/legistech/budget-bee/image?language=1&owner=1&name=1&stargazers=1&theme=Light)
+
 # budgetbee
 
 An ecommerce Application for shopping products of households and technology.
