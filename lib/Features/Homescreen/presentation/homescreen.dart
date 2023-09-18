@@ -5,8 +5,6 @@ import 'package:budgetbee/commons/widgets/productcard.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../../commons/firebaseservices/productprovider.dart';
-
 class HomeApp extends StatefulWidget {
   const HomeApp({super.key});
 
@@ -17,7 +15,6 @@ class HomeApp extends StatefulWidget {
 class _HomeAppState extends State<HomeApp> {
   final List<String> items =
       List.generate(20, (indexof) => 'Item ${indexof + 1}');
-  final FirebaseProvider _firebaseProvider = FirebaseProvider();
 
   @override
   Widget build(BuildContext context) {
@@ -28,12 +25,16 @@ class _HomeAppState extends State<HomeApp> {
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                FontAwesomeIcons.filter,
-                color: Colors.grey[500],
-              ))
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+            child: IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.filter_alt_outlined,
+                  size: 40,
+                  color: Colors.grey[500],
+                )),
+          )
         ],
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,

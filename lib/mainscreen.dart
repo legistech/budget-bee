@@ -42,23 +42,26 @@ class _HomeScreenState extends State<HomeScreen> {
         showUnselectedLabels: false,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.house),
+            icon: Icon(Icons.home_outlined),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.shapes),
+            icon: Icon(Icons.category_outlined),
             label: 'Business',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.cartShopping),
+            icon: Icon(Icons.shopping_cart_outlined),
             label: 'School',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.solidHeart),
+            icon: Icon(
+              FontAwesomeIcons.heart,
+              size: 20,
+            ),
             label: 'School',
           ),
           BottomNavigationBarItem(
-            icon: Icon(FontAwesomeIcons.userLarge),
+            icon: Icon(Icons.person_2_outlined),
             label: 'School',
           ),
         ],
