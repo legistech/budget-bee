@@ -18,8 +18,8 @@ class SplashServices {
       });
     } else {
       Timer(const Duration(milliseconds: 1500), () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const OnBoard()));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const HomeScreen()));
       });
     }
   }
